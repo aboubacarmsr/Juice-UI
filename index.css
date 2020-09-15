@@ -1,0 +1,145 @@
+:root{
+    --bgColor: #8CBB7F;
+    --orange: #f0a500;
+    --green: #28df99;
+    --red: #ff4b5c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Poppins, sans-serif;
+    overflow: hidden;
+}
+
+.menu img{
+    height: 5vh;
+    cursor: pointer;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+header{
+    height: 10vh;
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.presentation{
+    background-color: var(--bgColor);
+    padding: 3em;
+    color: white;
+    width: 75vw;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: move-right-in 1.5s ease;
+}
+
+.presentation h1{
+    font-size: 210px;
+    font-weight: 300;
+}
+
+.presentation p{
+    position: relative;
+    padding: 1em;
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: -55px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+
+button{
+    background-color: transparent;
+    outline: none;
+    border: 2px solid white;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    padding: 0.5em;
+    transition: all 800ms ease-in-out;
+}
+
+.buttons-list{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 30px;
+}
+
+.buttons-list .item{
+    margin-right: 0.2em;
+    cursor: pointer;
+}
+
+.orange:hover{
+    border: 2px solid var(--orange);
+    background: var(--orange);
+}
+.red:hover{
+    border: 2px solid var(--red);
+    background: var(--red);
+}
+.green:hover{
+    border: 2px solid var(--green);
+    background: var(--green);
+}
+
+.bigleafs{
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: drop 1.5s ease;
+    transition: all .9s ease-in-out;
+}
+
+.bigleafs:hover {
+    transform: scale(1.1);
+}
+
+@keyframes drop{
+	0%{
+		opacity: 0;
+		transform: translateY(-80px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes move-right-in{
+	0%{
+		opacity: 0;
+		transform: translateX(-90px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+

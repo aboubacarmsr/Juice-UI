@@ -1,0 +1,151 @@
+:root{
+    --textColor: #9b9b9b;
+    --titleColor: rgb(81, 163, 59);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Poppins, sans-serif;
+    overflow: hidden;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+header{
+    margin: auto;
+    padding: 2em;
+    height: 10vh;
+    width: 75vw;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    width: 75vw;
+    height: 85vh;
+    padding: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description{
+    width: 40vw;
+    margin-top: -50px;
+    animation: move-right-in 1.5s ease;
+}
+
+.description h2{
+    font-weight: 500;
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    color: var(--titleColor);
+}
+
+.description p{
+    color: var(--textColor);
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.description span{
+    color: var(--textColor);
+    font-size: 1em;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: -150px ;
+    /* animation: up 1.5s ease; */
+}
+
+.images img.leaf-img{
+    position: absolute;
+    bottom: 50px;
+    right: 250px;
+    height: 60vh;
+    animation: up 2s ease;
+}
+.images img.juice-img{
+    position: absolute;
+    bottom: 50px;
+    right: 180px;
+    height: 60vh;
+    animation: up 2s ease;
+}
+.images img.fruit-img{
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    height: 20vh;
+    animation: up 2s ease;
+}
+
+footer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2em;
+    width: 75vw;
+    margin: -80px auto 0 auto;
+    cursor: pointer;
+}
+.back{
+    display: flex;
+}
+.back a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+.back img{
+    width: 2vw;
+    margin-right: 1em;
+}
+
+.square{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: -1;
+    background-color: #eeeeee;
+}
+
+@keyframes up{
+	0%{
+		opacity: 0;
+		transform: translateY(80px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes move-right-in{
+	0%{
+		opacity: 0;
+		transform: translateX(-90px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
